@@ -1,0 +1,16 @@
+.Users{
+    display: flex;
+    height: 100vh;
+    padding-left: 100px;
+    background: rgba(0,0,0,0.7);
+    .user-list{
+        margin-top: 35vh;
+        .user{
+            font-size: 26px;
+            cursor: pointer;
+            &:hover{
+                color: white;
+            }
+        }
+    }
+}
