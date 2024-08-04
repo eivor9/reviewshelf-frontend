@@ -16,6 +16,7 @@ html{
     overflow: hidden;
 }
 .App{
+    min-height: 1000px;
     .bg-img{
         position: absolute;
         top: 0;

@@ -10,7 +10,8 @@ export default function Users() {
     useEffect(()=> {
         fetch(`${API}/reviews`)
         .then(res => res.json())
-        .then(res => setUsers(res.reviews.map(x => x.reviewer).filter(onlyUnique).sort((x,y) => x < y ? -1 : 1)))
+        .then(res => setUsers(res.map(x => x.reviewer).filter(onlyUnique).sort((x,y) => x < y ? -1 : 1)))
+        .catch(err => alert(err))
     }),[];
     
     return (
