@@ -4,7 +4,14 @@
     padding-left: 100px;
     background: rgba(0,0,0,0.7);
     .user-list{
-        margin-top: 35vh;
+        align-self: center;
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        max-height: 300px;
+        width: 125px;
+        padding: 20px;
+        overflow-y: scroll;
         .user{
             font-size: 26px;
             cursor: pointer;

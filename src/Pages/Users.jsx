@@ -10,7 +10,7 @@ export default function Users() {
     useEffect(()=> {
         fetch(`${API}/reviews`)
         .then(res => res.json())
-        .then(res => setUsers(res.reviews.map(x => x.reviewer)))
+        .then(res => setUsers(res.reviews.map(x => x.reviewer).filter(onlyUnique).sort((x,y) => x < y ? -1 : 1)))
     }),[];
     
     return (
@@ -28,3 +28,7 @@ export default function Users() {
         </>
     )
 }
+
+function onlyUnique(value, index, array) {
+    return array.indexOf(value) === index;
+  }

@@ -1,3 +1,9 @@
+import TitleBar from "../Components/TitleBar"
+
 export default function Home() {
-    return;
+    return(
+        <>
+            <TitleBar pageName={'HOME'}/>
+        </>
+    )
 }

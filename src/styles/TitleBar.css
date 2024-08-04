@@ -7,6 +7,7 @@
     left: 0;
     padding: 50px;
     justify-content: space-between;
+    gap: 20px;
     .title{
         font-size: 28px;
         text-align: center;
@@ -22,7 +23,7 @@
         text-align: center;
         position: relative;
         padding-bottom: 20px;
-        top: -22px;
+        top: -24px;
         border-bottom: 1px solid var(--greyborder);
         color: white;
         svg{

@@ -6,7 +6,7 @@ export default function TitleBar({pageName}){
     return (
         <div className="TitleBar">
             <div className="title">{pageName}</div>
-            <div className="icon"><HiOutlineBookOpen /></div>
+            <div style={pageName === "HOME" ? {borderColor:"white"}: null} className="icon"><HiOutlineBookOpen /></div>
             <div className="title"><FaGithub /></div>
         </div>
     )
