@@ -37,6 +37,7 @@
                 font-size: 90px;
                 font-weight: lighter;
                 text-align: center;
+                padding: 5px;
                 img{
                     cursor: pointer;
                     height: 100%;
@@ -47,8 +48,27 @@
         }
     }
     .right{
+        padding: 50px;
         width: 70%;
         box-sizing: border-box;
         border: 1px solid red;
+        display: flex;
+        gap: 50px;
+        align-items: center;
+        justify-content: center;
+        .cover-img{
+            border: 1px solid white;
+            width: 380px;
+            img{
+                width: inherit;
+            }
+        }
+        .review{
+            border: 1px solid white;
+            width: 380px;
+            height: 650px;
+            position: relative;
+            top: 45px;
+        }
     }
 }
