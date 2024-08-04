@@ -3,6 +3,7 @@
     height: 100vh;
     padding-left: 100px;
     background: rgba(0,0,0,0.7);
+    min-height: 500px;
     .user-list{
         align-self: center;
         display: flex;
