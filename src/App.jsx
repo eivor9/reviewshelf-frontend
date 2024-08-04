@@ -14,13 +14,13 @@ function App() {
 
   return(
     <div className="App">
-      <img src={bg_img} alt="background image" className="bg-img" />
+      <img src={bg_img} alt="background image" className="bg-img"/>
       <div className="main">
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route path="/" element={<Home/>} />
           <Route path="/users" element={<Users/>}/>
-          <Route path="/:user/reviews" element={<Reviews />} />
-          <Route path="*" element={<FourOFour />} />
+          <Route path="/reviews/:user" element={<Reviews/>} />
+          <Route path="*" element={<FourOFour/>} />
         </Routes>
       </div> 
     </div>

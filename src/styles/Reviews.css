@@ -1,0 +1,54 @@
+.Reviews{
+    display: flex;
+    height: 100vh;
+    background: linear-gradient(225deg, rgba(0,0,0,1) 10%, rgba(13,13,13,1) 35%, rgba(17,17,17,1) 77%, rgba(32,32,32,1) 100%);
+    min-height: 500px;
+    .left{
+        width: 30%;
+        box-sizing: border-box;
+        border: 1px solid white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-width: 400px;
+        flex-direction: column;
+        .current-title{
+            width: 380px;
+            font-size: 20px;
+            margin-bottom: 10px;
+            color: white;
+            position: relative;
+            left: -10px;
+        }
+        .books{
+            max-height: 580px;
+            min-height: 500px;
+            padding-right: 20px;
+            overflow-y: scroll;
+            overflow-x: hidden;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 10px;
+            .book{
+                width: 120px;
+                height: 120px;
+                background: var(--greyborder);
+                cursor: pointer;
+                font-size: 90px;
+                font-weight: lighter;
+                text-align: center;
+                img{
+                    cursor: pointer;
+                    height: 100%;
+                    display: block;
+                    margin: auto;
+                }
+            }
+        }
+    }
+    .right{
+        width: 70%;
+        box-sizing: border-box;
+        border: 1px solid red;
+    }
+}
