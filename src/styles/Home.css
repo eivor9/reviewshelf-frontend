@@ -1,0 +1,31 @@
+.Home{
+    display: flex;
+    height: 100vh;
+    padding-left: 100px;
+    background: rgba(0,0,0,0.7);
+    min-height: 500px;
+    .left-side {
+        box-sizing: border-box;
+        width: 50%;
+        display: flex;
+        align-items: center;
+        .enter-button{
+            padding: 20px;
+            font-size: 26px;
+            cursor: pointer;
+            &:hover{
+                color: white;
+            }
+        }
+    }
+    .right-side{
+        width: 50%;
+        box-sizing: border-box;
+        display: flex;
+        align-items: center;
+        .description {
+            padding: 20px;
+            font-size: 20px;
+        }
+    }
+}
