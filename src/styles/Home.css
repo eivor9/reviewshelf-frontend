@@ -2,7 +2,7 @@
     display: flex;
     height: 100vh;
     padding-left: 100px;
-    background: rgba(0,0,0,0.7);
+    background: rgba(0,0,0,0.3);
     min-height: 500px;
     .left-side {
         box-sizing: border-box;
@@ -26,6 +26,7 @@
         .description {
             padding: 20px;
             font-size: 20px;
+            color: white;
         }
     }
 }

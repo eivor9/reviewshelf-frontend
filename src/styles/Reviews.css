@@ -6,19 +6,29 @@
     .left{
         width: 30%;
         box-sizing: border-box;
-        border: 1px solid white;
         display: flex;
         align-items: center;
         justify-content: center;
         min-width: 400px;
         flex-direction: column;
         .current-title{
-            width: 380px;
+            width: 410px;
             font-size: 20px;
             margin-bottom: 10px;
             color: white;
-            position: relative;
-            left: -10px;
+            box-sizing: border-box;
+            display: flex;
+            gap: 5px;
+            justify-content: space-between;
+            .title{
+                width: fit-content;
+            }
+            .line{
+                border-top: 1px solid rgba(255, 255, 255, 0.3);
+                width: 0;
+                position: relative;
+                top: 8px;
+            }
         }
         .books{
             max-height: 580px;
@@ -32,7 +42,7 @@
             .book{
                 width: 120px;
                 height: 120px;
-                background: var(--greyborder);
+                background: rgba(255, 255, 255, 0.1);
                 cursor: pointer;
                 font-size: 90px;
                 font-weight: lighter;
@@ -48,27 +58,52 @@
         }
     }
     .right{
-        padding: 50px;
+        padding: 150px 50px 0;
         width: 70%;
         box-sizing: border-box;
-        border: 1px solid red;
         display: flex;
         gap: 50px;
-        align-items: center;
         justify-content: center;
         .cover-img{
-            border: 1px solid white;
-            width: 380px;
+            width: 350px;
+            display: flex;
+            flex-direction: column;
+            gap: 7px;
             img{
                 width: inherit;
             }
         }
         .review{
-            border: 1px solid white;
             width: 380px;
             height: 650px;
-            position: relative;
-            top: 45px;
+            padding: 0 20px;
+            font-size: 20px;
+            line-height: 30px;
+            overflow: scroll;
+            .spacing{
+                height: 100px;
+            }
         }
+    }
+}
+.footer{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    font-size: 20px;
+    justify-content: space-between;
+    width: 100%;
+    padding: 40px 50px;
+    box-sizing: border-box;
+    background: rgba(10, 10, 10, 0.85);
+    border-top: 1px solid var(--greyborder);
+    .buttons{
+        display: flex;
+        gap : 30px;
+    }
+    .button:hover{
+        color: white;
+        cursor: pointer;
     }
 }
