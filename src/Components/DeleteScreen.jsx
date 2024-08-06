@@ -14,7 +14,7 @@ export default function DeleteScreen({setDeleting, currentReview, currentTitle})
     
     const handleReviewDelete = () => {
         fetch(`${API}/books/${currentTitle.id}/reviews/${currentReview.reviewer}`, { method: "DELETE" })
-        .then(() => setDeleting(false))
+        .then(() => window.location.reload())
         .catch((error) => console.error(error));
     };
 

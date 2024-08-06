@@ -27,21 +27,21 @@ export default function Reviews() {
         content: "No review yet..."
     })
     const [currentTitle, setTitle] = useState({
-        "id": 1,
-        "title": "THE HOUSEMAID",
-        "author": "FREIDA MCFADDEN",
-        "page_num": 338,
-        "cover_img": "https://m.media-amazon.com/images/I/81AHTyq2wVL._AC_UF1000,1000_QL80_.jpg",
-        "category": "THRILLER",
-        "description": "An absolutely addictive psychological thriller with a jaw-dropping twist"
+        "id": 0,
+        "title": "SELECT A TITLE",
+        "author": "",
+        "page_num": 0,
+        "cover_img": "",
+        "category": "",
+        "description": ""
     })
 
     useEffect(()=> {
         fetch(`${API}/books`)
         .then(res => res.json())
-        .then(res => {setBooks(res)})
+        .then(res => setBooks(res))
         .catch(() => null)
-    }),[];
+    }, []);
 
     useEffect(()=> {
         fetch(`${API}/books/${currentTitle.id}/reviews`)
@@ -59,12 +59,12 @@ export default function Reviews() {
                     content: "No review yet..."
                 })
         })
-        .catch(x => null)
-    }),[];
+        .catch(() => null)
+    }, [currentTitle]);
 
     return(
         <>
-        <TitleBar pageName="REVIEWS"/>
+        <TitleBar pageName={user.toUpperCase()}/>
         <div className="Reviews">
             <div className="left">
                 <div className="current-title">
@@ -73,7 +73,7 @@ export default function Reviews() {
                 </div>
                 <div className="books">
                     <div onClick={() => setCreatingBook(true)} className="book">+</div>
-                    {books.map(book => <div onClick={() => setTitle(book)} style={currentTitle.title === book.title ? {boxShadow:"inset 0 0 0 1px white"}: null} key={book.id} className="book">
+                    {books.sort((x, y) => x.id - y.id).map(book => <div onClick={() => setTitle(book)} style={currentTitle.title === book.title ? {boxShadow:"inset 0 0 0 1px white"}: null} key={book.id} className="book">
                         <img style={!book.cover_img ? {filter:"hue-rotate(180deg) grayscale(100%)"} : null} src={book.cover_img || blank} alt="" />
                     </div>)}
                 </div>
@@ -95,8 +95,8 @@ export default function Reviews() {
         <div className="footer">
             <div onClick={() => navigate("/users")} className="button">BACK</div>
             <div className="buttons">
-                <div  onClick={() => setDeleting(true)} className="delete button">DELETE</div>
-                <div  onClick={() => setEditing(true)} className="edit button">EDIT</div>
+                <div  onClick={() => currentTitle.id ? setDeleting(true) : null} className="delete button">DELETE</div>
+                <div  onClick={() => currentTitle.id ? setEditing(true) : null} className="edit button">EDIT</div>
             </div>
         </div>
         {creatingBook ? <NewBook setCreatingBook={setCreatingBook}/> : null}

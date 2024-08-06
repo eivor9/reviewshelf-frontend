@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useParams } from "react-router-dom";
 import "../styles/DeleteScreen.css";
-import NewBook from "./NewBook";
+import EditBook from "./EditBook";
 
 const API = import.meta.env.VITE_API;
 
@@ -23,7 +23,7 @@ export default function DeleteScreen({setEditing, currentReview, currentTitle}){
 
     return(
         <div className="DeleteScreen">
-            {editingBook ? <NewBook currentTitle={currentTitle}/>
+            {editingBook ? <EditBook currentTitle={currentTitle}/>
             :
             <>
             <div className="legend">EDIT<div className="line"></div></div>
