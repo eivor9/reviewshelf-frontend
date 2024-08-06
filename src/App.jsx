@@ -1,6 +1,6 @@
 // DEPENDENCIES
 import "./styles/App.css";
-import bg_img from "./assets/bg_img.png"
+import bg_img from "./assets/bg_img.jpg"
 import React, { useState } from 'react';
 import { Routes, Route } from "react-router-dom";
 
