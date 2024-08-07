@@ -2,7 +2,7 @@
 
 # REVIEW SHELF - FRONTEND
 
-This app is designed to connect book lovers by allowing them to share their thoughts on their favorite reads with friends. Users can easily post reviews, rate books, and discover new recommendations from their network. It’s the perfect platform for sparking conversations and deepening your literary connections. Test it out [here](https://budget-logbook-gui.netlify.app).
+This app is designed to connect book lovers by allowing them to share their thoughts on their favorite reads with friends. Users can easily post reviews, rate books, and discover new recommendations from their network. It’s the perfect platform for sparking conversations and deepening your literary connections. Test it out [here](https://main--review-shelf.netlify.app).
 
 ---
 __Noteworthy features__
