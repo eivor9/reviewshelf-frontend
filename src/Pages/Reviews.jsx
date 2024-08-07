@@ -19,7 +19,6 @@ export default function Reviews() {
     const [editing, setEditing] = useState(false);
 
     const [currentReview, setReview] = useState({
-        id: 0,
         rating: 0,
         book_id: 0,
         reviewer: user.toUpperCase(),

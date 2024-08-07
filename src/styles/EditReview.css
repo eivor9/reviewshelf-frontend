@@ -1,0 +1,33 @@
+.EditReview{
+    form{
+        .input{
+            label{
+                width: fit-content;
+                color: white;
+            }
+            input{
+                width: 50px;
+            }
+            input[type="checkbox"]{
+                position: relative;
+                top: 5px;
+            }
+            textarea{
+                font-size: 18px;
+                height: 300px;
+                background: none;
+                border: none;
+                padding: 10px;
+                &::selection{
+                    background: rgba(255, 255, 255, 0.3);
+                }
+            }
+            &:last-of-type{
+                flex-direction: column;
+                label{
+                    color: var(--greytext);
+                }
+            }
+        }
+    }
+}

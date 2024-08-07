@@ -29,4 +29,21 @@
         padding: 20px;
         color: white;
     }
+    .users-footer{
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        padding: 40px 50px;
+        box-sizing: border-box;
+        background: rgba(10, 10, 10, 0.85);
+        border-top: 1px solid var(--greyborder);
+        input{
+            padding: 2px;
+            background: none;
+            border: 1px solid rgba(255,255,255,0.3);
+            font-size: 20px;
+            width: 130px;
+        }
+    }
 }
